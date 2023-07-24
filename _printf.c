@@ -33,6 +33,7 @@ print_string(va_arg(args, char*));
 len--;
 break;
 case 'd':
+case 'i':
 print_int(va_arg(args, int));
 len--;
 break;
