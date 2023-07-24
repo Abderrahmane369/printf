@@ -21,7 +21,7 @@ n_len++;
 n_c = n;
 k = n_len - 1;
 
-s = malloc(sizeof(char) * (n_len + 2));
+s = malloc(sizeof(char) * (n_len + 1));
 
 while (k >= 0)
 {

@@ -5,18 +5,35 @@
 /**
  * print_int - prints integers.
  * @d : integer.
+ * Return: d bytes.
  */
-void print_int(int d)
+
+int print_int(int d)
 {
-	if (d == 0)
-	{
-		print_char ('0');
-		return;
-	}
-	else if (d < 0)
-	{
-		print_char ('-');
-		d = -d;
-	}
-	print_string(intToString(d));
+char *s;
+int len = 0;
+
+if (d == 0)
+{
+print_char('0');
+
+return (1);
+}
+
+else if (d < 0)
+{
+print_char('-');
+
+len++;
+d = -d;
+}
+s = intToString(d);
+
+print_string(s);
+
+len += strlen(s);
+
+free(s);
+
+return (len);
 }

@@ -12,6 +12,7 @@
  * @...: format string
  * Return: CHARACTERS LENGTH
  */
+
 int _printf(const char *format, ...)
 {
 va_list args;
@@ -27,22 +28,21 @@ u++;
 switch (format[u])
 {
 case 'c':
-print_char(va_arg(args, int));
+len += print_char(va_arg(args, int));
 break;
 case 's':
-print_string(va_arg(args, char*));
+len += print_string(va_arg(args, char*));
 break;
 case 'd':
 case 'i':
-print_int(va_arg(args, int));
+len += print_int(va_arg(args, int));
 break;
 case '%':
-percent();
+len += percent();
 break;
 default:
 write(1, &format[u], 1);
 }
-len++;
 }
 else
 {
