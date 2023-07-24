@@ -8,7 +8,6 @@
  */
 void percent(void)
 {
-char per;
-per = '%';
+char per = '%';
 write(1, &per, 1);
 }
