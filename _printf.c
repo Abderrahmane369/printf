@@ -37,6 +37,7 @@ case '%':
 len += percent();
 break;
 default:
+if (*format != ' ')
 write(1, &(*format), 1);
 }
 }
