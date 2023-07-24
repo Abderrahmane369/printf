@@ -16,44 +16,41 @@
 int _printf(const char *format, ...)
 {
 va_list args;
-int len = 0, u = 0;
+int len = 0;
 va_start(args, format);
-if (!format || !format[0])
+if (!format)
 return (-1);
-while (format[u])
+while (*format)
 {
-if (format[u] == '%')
+if (*format == '%')
 {
-u++;
-switch (format[u])
+format++;
+switch (*format)
 {
 case 'c':
 len += print_char(va_arg(args, int));
-/*len--;*/
 break;
 case 's':
 len += print_string(va_arg(args, char*));
-/*len--;*/
 break;
 case 'd':
 case 'i':
 len += print_int(va_arg(args, int));
-/*len--;*/
 break;
 case '%':
 len += percent();
-/*len--;*/
 break;
 default:
-write(1, &format[u], 1);
+if (*format != ' ')
+write(1, &(*format), 1);
 }
 }
 else
 {
-write(1, &format[u], 1);
+write(1, &(*format), 1);
 len++;
 }
-u++;
+format++;
 }
 va_end(args);
 return (len);
