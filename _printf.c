@@ -4,13 +4,11 @@
 #include <stdarg.h>
 #include <string.h>
 #include <unistd.h>
-
 /**
  * _printf - a printf-like function
  * @format: a character string.
  * @...: format string
  */
-
 int _printf(const char *format, ...)
 {
 va_list args;
