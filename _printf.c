@@ -33,10 +33,6 @@ break;
 case 's':
 len += print_string(va_arg(args, char*));
 break;
-case 'd':
-case 'i':
-len += print_int(va_arg(args, int));
-break;
 case '%':
 len += percent();
 break;
