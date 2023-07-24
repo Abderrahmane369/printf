@@ -41,7 +41,7 @@ case '%':
 len += percent();
 break;
 default:
-if (*format != ' ')
+len += percent();
 write(1, &(*format), 1);
 }
 }
