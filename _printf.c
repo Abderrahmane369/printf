@@ -41,12 +41,12 @@ u++;
 len++;
 break;
 default:
-write(1, *format, 1);
+write(1, &(*format), 1);
 }
 }
 else
 {
-write(1, *format, 1);
+write(1, &(*format), 1);
 len++;
 }
 u++;
