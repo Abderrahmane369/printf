@@ -11,5 +11,5 @@ void print_string(char *s)
 if (s)
 write(1, &s, strlen(s));
 else
-write(1,"(null)", 6);
+write(1, "(null)", 6);
 }
