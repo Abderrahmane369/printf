@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <string.h>
+
 /**
  * print_string - prints strings.
  * @s : string.
