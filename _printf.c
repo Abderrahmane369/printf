@@ -43,6 +43,7 @@ write(1, &(*format), 1);
 else
 {
 write(1, &(*format), 1);
+len++;
 }
 format++;
 }
