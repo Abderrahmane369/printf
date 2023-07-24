@@ -29,20 +29,25 @@ switch (format[u])
 {
 case 'c':
 len += print_char(va_arg(args, int));
+/*len--;*/
 break;
 case 's':
 len += print_string(va_arg(args, char*));
+/*len--;*/
 break;
 case 'd':
 case 'i':
 len += print_int(va_arg(args, int));
+/*len--;*/
 break;
 case '%':
 len += percent();
+/*len--;*/
 break;
 default:
 write(1, &format[u], 1);
 }
+
 }
 else
 {
