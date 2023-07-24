@@ -40,6 +40,9 @@ break;
 case '%':
 len += percent();
 break;
+case ' ':
+u++;
+len++;
 default:
 write(1, &format[u], 1);
 }
