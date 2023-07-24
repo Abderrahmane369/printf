@@ -36,10 +36,6 @@ break;
 case '%':
 len += percent();
 break;
-case ' ':
-format++;
-len++;
-break;
 default:
 write(1, &(*format), 1);
 }
