@@ -28,20 +28,20 @@ switch (format[u])
 {
 case 'c':
 print_char(va_arg(args, int));
-len--;
+/*len--;*/
 break;
 case 's':
 print_string(va_arg(args, char*));
-len--;
+/*len--;*/
 break;
 case 'd':
 case 'i':
 print_int(va_arg(args, int));
-len--;
+/*len--;*/
 break;
 case '%':
 percent();
-len--;
+/*len--;*/
 break;
 default:
 write(1, &format[u], 1);
