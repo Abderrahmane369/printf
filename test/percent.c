@@ -4,11 +4,13 @@
 #include <unistd.h>
 /**
  * percent - prints percent.
- *
+ * Return:  the bytes of %
  */
-void percent(void)
+
+int percent(void)
 {
-char per;
-per = '%';
-write(1, &per, 1);
+char percent = '%';
+write(1, &percent, 1);
+
+return (1);
 }
