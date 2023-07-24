@@ -42,6 +42,7 @@ len += percent();
 break;
 default:
 write(1, &format[u], 1);
+len++;
 }
 }
 else
