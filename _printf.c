@@ -43,15 +43,13 @@ break;
 default:
 write(1, &format[u], 1);
 }
-format++;
 }
 else
 {
 write(1, &format[u], 1);
-format++;
 len++;
 }
-/*u++;*/
+u++;
 }
 va_end(args);
 return (len);
