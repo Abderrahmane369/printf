@@ -16,16 +16,16 @@
 int _printf(const char *format, ...)
 {
 va_list args;
-int len = 0, u = 0;
+int len = 0;
 va_start(args, format);
-if (!format || !format[0])
+if (!format)
 return (-1);
-while (format[u])
+while (*format)
 {
-if (format[u] == '%')
+if (*format == '%')
 {
 u++;
-switch (format[u])
+switch (*format)
 {
 case 'c':
 len += print_char(va_arg(args, int));
@@ -41,12 +41,12 @@ u++;
 len++;
 break;
 default:
-write(1, &format[u], 1);
+write(1, *format, 1);
 }
 }
 else
 {
-write(1, &format[u], 1);
+write(1, *format, 1);
 len++;
 }
 u++;
