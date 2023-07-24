@@ -24,7 +24,7 @@ while (*format)
 {
 if (*format == '%')
 {
-u++;
+format++;
 switch (*format)
 {
 case 'c':
@@ -49,7 +49,7 @@ else
 write(1, &(*format), 1);
 len++;
 }
-u++;
+format++;
 }
 va_end(args);
 return (len);
