@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 va_list args;
 int len = 0, u = 0;
 va_start(args, format);
-if format (!format || !format[0])
+if (!format || !format[0])
 return (-1);
 while (format[u])
 {
