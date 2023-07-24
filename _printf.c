@@ -15,7 +15,7 @@
 int _printf(const char *format, ...)
 {
 va_list args;
-int u = 0, len = 0;
+int len = 0, u = 0;
 va_start(args, format);
 while (format[u])
 {
@@ -30,6 +30,10 @@ len--;
 break;
 case 's':
 print_string(va_arg(args, char*));
+len--;
+break;
+case 'd':
+print_int(va_arg(args, int));
 len--;
 break;
 case '%':
