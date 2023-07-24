@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 #include <stdio.h>
 #include <limits.h>
 #include <stdarg.h>
@@ -39,6 +39,8 @@ len += percent();
 break;
 default:
 write(1, &format[u], 1);
+len += percent();
+break;
 }
 }
 else

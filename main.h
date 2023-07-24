@@ -13,6 +13,6 @@ int percent(void);
 int print_char(char c);
 int print_string(char *s);
 int print_int(int d);
-char *intToString(int n);
+char *intToString(unsigned int n);
 
 #endif

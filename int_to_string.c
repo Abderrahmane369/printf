@@ -8,7 +8,7 @@
  * Return: the string
  */
 
-char *intToString(int n)
+char *intToString(unsigned int n)
 {
 char *s;
 int n_len = 1;
