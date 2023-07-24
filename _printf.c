@@ -42,15 +42,16 @@ len += percent();
 break;
 default:
 write(1, &format[u], 1);
-len++;
 }
+format++;
 }
 else
 {
 write(1, &format[u], 1);
+format++;
 len++;
 }
-u++;
+/*u++;*/
 }
 va_end(args);
 return (len);
