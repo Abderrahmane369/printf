@@ -9,25 +9,26 @@
  * Return: d bytes.
  */
 
-int print_int(int d)
-{
+// Function to print an integer (with special handling for INT_MIN)
+int print_int(int d) {
 char *s;
 int len = 0;
 
-if (d < 0)
-{
+if (d == INT_MIN) {
+s = intToString((unsigned int)d);
+len += print_string(s);
+free(s);
+} else {
+if (d < 0) {
 print_char('-');
-
 len++;
 d = -d;
 }
 s = intToString(d);
-
-print_string(s);
-  
-len += strlen(s);
-
+len += print_string(s);
 free(s);
-
-return (len);
 }
+
+return len;
+}
+
