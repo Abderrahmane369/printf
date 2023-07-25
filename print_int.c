@@ -9,26 +9,14 @@
  * Return: d bytes.
  */
 
-int print_int(int d)
+int print_integer(int n)
 {
-char *s;
-int len = 0;
+	char *p_buff;
+	int size;
 
-if (d < 0)
-{
-print_char('-');
+	p_buff = itoa(n, 10);
 
-len++;
+	size = print((p_buff != NULL) ? p_buff : "NULL");
 
-d = -d;
-}
-s = intToString((unsigned int)d);
-
-print_string(s);
-
-len += strlen(s);
-
-free(s);
-
-return (len);
+	return (size);
 }
