@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
  * dec_to_bin - base 10 to base 2
@@ -6,7 +7,7 @@
  * Return: base 2 (number)
  */
 
-int dec_to_bin(unsigned int n)
+unsigned int dec_to_bin(unsigned int n)
 {
 	unsigned int num = n;
 	unsigned int bnum = 0;
