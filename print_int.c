@@ -21,13 +21,15 @@ len++;
 
 d = -d;
 }
+
 s = intToString(d);
 
+if (s != NULL)
+{
 print_string(s);
-
-len += _strlen(s);
-
+len += strlen(s);
 free(s);
+}
 
 return (len);
 }
