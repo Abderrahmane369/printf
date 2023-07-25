@@ -15,9 +15,7 @@ int _printf(const char *format, ...)
 va_list args;
 int len = 0;
 va_start(args, format);
-if (!format || (format[0] == '%' && !format[1]))
-return (-1);
-if (format[0] == '%' && format[1] == ' ' && !format[2])
+if (!format || (format[0] == '%' && !format[1]) || format[0] == '%' && format[1] == ' ' && !format[2])
 return (-1);
 while (*format)
 {
@@ -41,7 +39,7 @@ len += percent();
 break;
 default:
 len += percent() + 1;
-write(1, &(*format), 1); 
+write(1, &(*format), 1);
 }
 }
 else
