@@ -11,12 +11,34 @@
 
 int print_int(int n)
 {
-	char *p_buff;
-	int size;
+int len = 0;
 
-	p_buff = itoa(n, 10);
-
-	size = print((p_buff != NULL) ? p_buff : "NULL");
-
-	return (size);
+if (n == 0)
+{
+print_char('0');
+return (1);
+}
+else if (n < 0)
+{
+char m = '-';
+write(1, &m, 1);
+len++;
+n = -n;
+}
+int temp = n;
+while (temp > 0)
+{
+temp /= 10;
+len++;
+}
+char buffer[len];
+int i = len - 1;
+while (n > 0)
+{
+buffer[i] = '0' + (n % 10);
+n /= 10;
+i--;
+}
+write(1, buffer, len);
+return (len);
 }
