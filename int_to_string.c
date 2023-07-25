@@ -11,7 +11,7 @@
 char *intToString(unsigned int n)
 {
 char *s;
-int n_len = 0;
+int n_len = 1;
 int n_c = n;
 int k;
 
