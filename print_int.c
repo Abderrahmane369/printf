@@ -11,7 +11,7 @@
 
 int print_int(int n)
 {
-int len = 0, temp;
+int len = 0, temp, i;
 char *buffer;
   
 if (n == 0)
@@ -33,7 +33,7 @@ temp /= 10;
 len++;
 }
 buffer = malloc(sizeof(char) * (len + 1));
-int i = len - 1;
+i = len - 1;
 while (n > 0)
 {
 buffer[i] = '0' + (n % 10);
