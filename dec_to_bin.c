@@ -12,10 +12,13 @@ unsigned int dec_to_bin(unsigned int n)
 	unsigned int num = n;
 	unsigned int bnum = 0;
 	unsigned int k = 0;
+	unsigned int t = 1;
 
 	while (num /= 2 > 0)
 	{
-		bnum += (num % 2) * pow(10, k);
+		bnum += (num % 2) * t;
+
+		t *= 10;
 
 		num /= 2;
 
