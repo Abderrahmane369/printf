@@ -9,8 +9,8 @@
  * Return: d bytes.
  */
 
-// Function to print an integer (with special handling for INT_MIN)
-int print_int(int d) {
+int print_int(int d)
+{
 char *s;
 int len = 0;
 
@@ -31,4 +31,3 @@ free(s);
 
 return len;
 }
-
