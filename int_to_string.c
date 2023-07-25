@@ -17,7 +17,7 @@ int k;
 
 while (n_c > 0)
 {
-n_c /= 10;:
+n_c /= 10;
 n_len++;
 }
 n_c = n;
