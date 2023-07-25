@@ -11,8 +11,9 @@
 
 int print_int(int n)
 {
-int len = 0;
-
+int len = 0, temp;
+char *buffer;
+  
 if (n == 0)
 {
 print_char('0');
@@ -25,13 +26,13 @@ write(1, &m, 1);
 len++;
 n = -n;
 }
-int temp = n;
+temp = n;
 while (temp > 0)
 {
 temp /= 10;
 len++;
 }
-char buffer[len];
+buffer = malloc(sizeof(char) * (len + 1));
 int i = len - 1;
 while (n > 0)
 {
