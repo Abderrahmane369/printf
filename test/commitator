@@ -1,0 +1,10 @@
+#!/bin/bash
+
+touch f
+git add f
+git commit -m "F"
+git push
+rm f
+git add .
+git commit -m "F"
+git push
