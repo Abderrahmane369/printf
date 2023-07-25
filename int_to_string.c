@@ -12,7 +12,7 @@ char *intToString(unsigned int n)
 {
 char *s;
 int n_len = 1;
-int n_c = n;
+unsigned int n_c = n;
 int k;
 
 while (n_c /= 10)
