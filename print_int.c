@@ -27,7 +27,7 @@ len++;
 n = -n;
 }
 temp = n;
-while (temp > 0)
+while (temp >= 0)
 {
 temp /= 10;
 len++;
