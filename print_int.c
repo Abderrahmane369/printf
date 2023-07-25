@@ -9,37 +9,22 @@
  * Return: d bytes.
  */
 
-int print_int(int n)
+int print_string(char *s)
 {
-int len = 0, temp, i;
-char *buffer;
-  
-if (n == 0)
+char *str;
+
+if (s)
 {
-print_char('0');
-return (1);
+str = s;
+
+int len = strlen(str);
+write(1, str, len); // Use strlen to get the correct length
+return len; // Return the length including the null terminator
 }
-else if (n < 0)
+else
 {
-char m = '-';
-write(1, &m, 1);
-len++;
-n = -n;
+str = "(null)";
+write(1, str, 6);
+return 6;
 }
-temp = n;
-while (temp >= 0)
-{
-temp /= 10;
-len++;
-}
-buffer = malloc(sizeof(char) * (len + 1));
-i = len - 1;
-while (n > 0)
-{
-buffer[i] = '0' + (n % 10);
-n /= 10;
-i--;
-}
-write(1, buffer, len);
-return (len);
 }
