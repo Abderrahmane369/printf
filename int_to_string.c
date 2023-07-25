@@ -21,7 +21,7 @@ n_c /= 10;
 n_len++;
 }
 n_c = n;
-k = n_len;
+k = n_len - 1;
 
 s = malloc(sizeof(char) * (n_len + 1));
 
