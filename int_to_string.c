@@ -15,9 +15,8 @@ int n_len = 1;
 int n_c = n;
 int k;
 
-while (n_c > 0)
+while (n_c /= 10)
 {
-n_c /= 10;
 n_len++;
 }
 n_c = n;
