@@ -14,7 +14,7 @@ int print_string(char *s)
 {
 if (s)
 {
-int len = strlen(s);
+int len = _strlen(s);
 write(1, s, len);
 return (len);
 }
