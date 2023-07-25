@@ -9,7 +9,7 @@
  * Return: d bytes.
  */
 
-int print_int(unsigned int d)
+int print_int(int d)
 {
 char *s;
 int len = 0;
