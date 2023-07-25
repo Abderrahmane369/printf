@@ -28,6 +28,9 @@ switch (*format)
 case 'c':
 len += print_char(va_arg(args, int));
 break;
+case 'b':
+len += print_int(dec_to_bin(va_arg(args, int)));
+break;
 case 's':
 len += print_string(va_arg(args, char*));
 break;
