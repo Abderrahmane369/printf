@@ -9,10 +9,10 @@
 #include <stdlib.h>
 
 int _printf(const char *format, ...);
-void percent(void);
-void print_char(char c);
-void print_string(char *s);
-void print_int(int d);
+int percent(void);
+int print_char(char c);
+int print_string(char *s);
+int print_int(int d);
 char *intToString(unsigned int n);
 
 #endif
