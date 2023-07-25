@@ -12,12 +12,13 @@ char *intToString(unsigned int n)
 {
 char *s;
 int n_len = 1;
-int n_c = n;
+unsigned int n_c = n;
 int k;
 
 while (n_c /= 10)
+{
 n_len++;
-
+}
 n_c = n;
 k = n_len - 1;
 
