@@ -13,14 +13,7 @@ int print_int(int d)
 char *s;
 int len = 0;
 
-if (d == 0)
-{
-print_char('0');
-
-return (1);
-}
-
-else if (d < 0)
+if (d < 0)
 {
 print_char('-');
 
