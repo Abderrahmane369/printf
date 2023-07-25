@@ -11,12 +11,13 @@
 char *intToString(unsigned int n)
 {
 char *s;
-int n_len = 1;
+int n_len = 0;
 unsigned int n_c = n;
 int k;
 
-while (n_c /= 10)
+while (n_c > 0)
 {
+n_c /= 10;
 n_len++;
 }
 n_c = n;
@@ -26,12 +27,10 @@ s = malloc(sizeof(char) * (n_len + 1));
 
 while (k >= 0)
 {
-s[k] = '0' + n % 10;
-
+s[k] = '0' + (n % 10);
 n /= 10;
-
 k--;
 }
-s[n_len] = '\0';
+s[n_len + 1] = '\0';
 return (s);
 }
