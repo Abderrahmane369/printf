@@ -14,5 +14,6 @@ int print_char(char c);
 int print_string(char *s);
 int print_int(int d);
 char *intToString(unsigned int n);
+int _strlen(char *s);
 
 #endif

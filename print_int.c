@@ -8,7 +8,6 @@
  * @d : integer.
  * Return: d bytes.
  */
-
 int print_int(int d)
 {
 char *s;
@@ -26,7 +25,7 @@ s = intToString(d);
 
 print_string(s);
 
-len += strlen(s);
+len += _strlen(s);
 
 free(s);
 
