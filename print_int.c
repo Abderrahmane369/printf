@@ -30,7 +30,8 @@ d = -d;
 s = intToString(d);
 
 print_string(s);
-
+print_char('\0');
+  
 len += strlen(s);
 
 free(s);
