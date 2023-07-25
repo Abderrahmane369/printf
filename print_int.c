@@ -9,7 +9,7 @@
  * Return: d bytes.
  */
 
-int print_integer(int n)
+int print_int(int n)
 {
 	char *p_buff;
 	int size;
