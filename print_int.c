@@ -22,7 +22,7 @@ len++;
 
 d = -d;
 }
-s = intToString(d);
+s = intToString((unsigned int)d);
 
 print_string(s);
 
