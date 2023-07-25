@@ -25,12 +25,20 @@ k = n_len - 1;
 
 s = malloc(sizeof(char) * (n_len + 1));
 
+if (n_c == 0)
+{
+s[0] = '0';
+s[1] = '\0';
+
+return (s);
+}
+  
 while (k >= 0)
 {
 s[k] = '0' + (n % 10);
 n /= 10;
 k--;
 }
-s[n_len + 1] = '\0';
+s[n_len] = '\0';
 return (s);
 }
