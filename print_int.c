@@ -9,22 +9,26 @@
  * Return: d bytes.
  */
 
-int print_string(char *s)
+int print_int(int d)
 {
-char *str;
+char *s;
+int len = 0;
+    
+if (d < 0)
+{
+print_char('-');
 
-if (s)
-{
-str = s;
+len++;
 
-int len = strlen(str);
-write(1, str, len); // Use strlen to get the correct length
-return len; // Return the length including the null terminator
+d = -d;
 }
-else
-{
-str = "(null)";
-write(1, str, 6);
-return 6;
-}
+s = intToString(d);
+
+print_string(s);
+
+len += strlen(s);
+
+free(s);
+
+return (len);
 }
