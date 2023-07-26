@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for (( i = 0; i < 76; i++)); do
+
+	touch f
+	git add f
+	git commit -m "F"
+	git push
+	rm f
+	git add .
+	git commit -m "F"
+	git push
+done
