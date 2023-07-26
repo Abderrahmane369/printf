@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for (( i = 0; i < 76; i++)); do
+for (( i = 0; i < 47; i++)); do
 
 	touch f
 	git add f
