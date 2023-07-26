@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
  * dec_to_bin - base 10 to base 2
